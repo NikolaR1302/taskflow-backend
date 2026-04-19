@@ -31,6 +31,12 @@ public class ProjectService {
         return mapToResponse(project);
     }
 
+    public ProjectResponse getProjectById(Long id) {
+        Project project = projectRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Project not found"));
+        return mapToResponse(project);
+    }
+
     public List<ProjectResponse> getProjectByUser(String email){
         User owner = userRepository.findByEmail(email).orElseThrow(()-> new RuntimeException("User not found"));
 
