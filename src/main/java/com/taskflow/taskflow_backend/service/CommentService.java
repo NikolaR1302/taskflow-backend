@@ -50,7 +50,7 @@ public class CommentService {
         return new CommentResponse(
                 comment.getId(),
                 comment.getContent(),
-                comment.getUser().getUsername(),
+                comment.getUser().getUsernameField(),
                 comment.getTask().getId(),
                 comment.getCreatedAt()
         );

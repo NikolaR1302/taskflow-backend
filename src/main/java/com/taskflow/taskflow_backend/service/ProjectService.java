@@ -62,7 +62,7 @@ public class ProjectService {
                 project.getId(),
                 project.getName(),
                 project.getDescription(),
-                project.getOwner().getUsername(),
+                project.getOwner().getUsernameField(),
                 project.getCreatedAt()
         );
     }

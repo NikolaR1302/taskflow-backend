@@ -30,7 +30,7 @@ public class TaskService {
                 task.getDescription(),
                 task.getStatus(),
                 task.getProject().getId(),
-                task.getAssignedTo() != null? task.getAssignedTo().getUsername() : null,
+                task.getAssignedTo() != null? task.getAssignedTo().getUsernameField() : null,
                 task.getDueDate(),
                 task.getCreatedAt()
         );
